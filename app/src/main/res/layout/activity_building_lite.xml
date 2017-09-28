@@ -1,0 +1,67 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical"
+	android:layout_height="match_parent">
+	<include
+		layout="@layout/toolbar_layout_button"
+		android:layout_width="match_parent"
+		android:layout_height="40dip"
+
+		/>
+	<app.dinus.com.loadingdrawable.LoadingView
+		android:id="@+id/electric_fan_view"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="#ffd4d9da"
+		app:loading_renderer="BalloonLoadingRenderer" />
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:orientation="vertical"
+		android:layout_height="match_parent">
+
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:orientation="vertical"
+			android:layout_height="wrap_content">
+			<com.example.administrator.irrigationworks.Ui.widget.RefreshableView
+				android:id="@+id/SwipeRefreshLayout"
+				android:layout_width="match_parent"
+				android:visibility="gone"
+				android:layout_height="match_parent">
+
+					<com.example.administrator.irrigationworks.Ui.uiview.RecyclerViewExt
+						android:id="@+id/recycler_work_more"
+						android:layout_width="match_parent"
+						android:background="@color/white"
+						android:layout_height="match_parent" />
+
+
+
+
+			</com.example.administrator.irrigationworks.Ui.widget.RefreshableView>
+
+		</LinearLayout>
+
+	</RelativeLayout>
+	<com.example.administrator.irrigationworks.Ui.View.MyGridView
+		android:id="@+id/gridView"
+		android:layout_width="match_parent"
+		android:layout_height="0dip"
+		android:visibility="gone"
+		android:layout_margin="15dip"
+		android:layout_weight="1"
+		android:scrollbars="none"
+		android:horizontalSpacing="5dp"
+		android:background="@android:color/white"
+		android:numColumns="4"
+		android:padding="@dimen/margin_20" />
+	</LinearLayout>
+</LinearLayout>

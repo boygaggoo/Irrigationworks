@@ -1,0 +1,56 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical"
+	android:background="@color/white"
+	android:layout_height="match_parent">
+	<include
+		layout="@layout/toolbar_layout"
+		android:layout_width="match_parent"
+		android:layout_height="40dip"
+
+		/>
+	<com.amap.api.maps.MapView
+		android:id="@+id/map"
+		android:visibility="gone"
+		android:layout_width="match_parent"
+		android:layout_height="200dip"></com.amap.api.maps.MapView>
+	<ImageView
+		android:id="@+id/network_error"
+		android:layout_width="match_parent"
+		android:visibility="gone"
+		android:src="@mipmap/network_error"
+		android:layout_height="match_parent" />
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+		<app.dinus.com.loadingdrawable.LoadingView
+			android:id="@+id/electric_fan_view"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:background="@color/white"
+			app:loading_renderer="BalloonLoadingRenderer" />
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:orientation="vertical"
+			android:layout_height="wrap_content">
+			<com.example.administrator.irrigationworks.Ui.widget.RefreshableView
+				android:id="@+id/SwipeRefreshLayout"
+				android:layout_width="match_parent"
+				android:visibility="gone"
+				android:layout_height="match_parent">
+				<com.example.administrator.irrigationworks.Ui.uiview.RecyclerViewExt
+					android:id="@+id/recycler_work_more"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent" />
+
+
+			</com.example.administrator.irrigationworks.Ui.widget.RefreshableView>
+
+		</LinearLayout>
+
+	</RelativeLayout>
+
+</LinearLayout>

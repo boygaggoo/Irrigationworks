@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="spingarr">
+        <item>上班(9:00)</item>
+        <item>下班(18:00)</item>
+
+    </string-array>
+    <array name="customCalendar_currentDay_bg_DashPath">
+        <item>8</item>
+        <item>8</item>
+        <item>8</item>
+        <item>4</item>
+        <item>4</item>
+        <item>4</item>
+    </array>
+    <string-array name="month">
+        <item>1月</item>
+        <item>2月</item>
+        <item>3月</item>
+        <item>4月</item>
+        <item>5月</item>
+        <item>6月</item>
+        <item>7月</item>
+        <item>8月</item>
+        <item>9月</item>
+        <item>10月</item>
+        <item>11月</item>
+        <item>12月</item>
+
+    </string-array>
+</resources>

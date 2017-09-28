@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/bga_record_management"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:paddingLeft="12dp">
+
+        <RelativeLayout
+            android:layout_width="29dip"
+            android:layout_height="29dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@color/white"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:gravity="center">
+
+            <com.example.administrator.irrigationworks.Ui.badgeview.BGABadgeImageView
+                android:layout_width="30dip"
+
+                android:layout_height="30dip"
+                android:layout_centerHorizontal="true"
+
+                android:focusable="false"
+                android:scaleType="centerInside"
+                android:src="@mipmap/message" />
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/iv_record_management"
+            android:text="考勤记录"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/tv_title"
+            android:text="2017/08/11 19:05"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="2dip">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:background="#CCCCCC"></View>
+    </LinearLayout>
+
+
+</LinearLayout>

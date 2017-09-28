@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <dbname value="demo" ></dbname>
+
+    <version value="18" ></version>
+
+    <list>
+
+        <mapping class="com.example.administrator.irrigationworks.Ui.litepal.RoleBeanLitepal"></mapping>
+        <mapping class="com.example.administrator.irrigationworks.Ui.litepal.ConstructionDataLitepal"></mapping>
+        <mapping class="com.example.administrator.irrigationworks.Ui.litepal.ConstructionListDataLitepal"></mapping>
+        <mapping class="com.example.administrator.irrigationworks.Ui.litepal.ConstructorDataLitepal"></mapping>
+        <mapping class="com.example.administrator.irrigationworks.Ui.litepal.InspectorDataLitepal"></mapping>
+        <mapping class="com.example.administrator.irrigationworks.Ui.litepal.SupervisorDataLitepal"></mapping>
+        <mapping class="com.example.administrator.irrigationworks.Ui.litepal.TotalDataLitepal"></mapping>
+        <mapping class="com.example.administrator.irrigationworks.Ui.litepal.MianBuID"></mapping>
+        <mapping class="com.example.administrator.irrigationworks.Ui.litepal.PmDataLitepal"></mapping>
+        <mapping class="com.example.administrator.irrigationworks.Ui.litepal.ChiefsupervisorDataLitepal"></mapping>
+        <mapping class="com.example.administrator.irrigationworks.Ui.litepal.CoordinateLitepal"></mapping>
+
+
+    </list>
+</litepal>

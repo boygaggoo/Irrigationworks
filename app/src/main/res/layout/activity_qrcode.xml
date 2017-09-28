@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <include
+        layout="@layout/toolbar_layout"
+        android:layout_width="match_parent"
+
+        android:layout_height="40dip"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/smaller_margin_top"
+                    android:background="@android:color/white">
+
+                    <ImageView
+                        android:id="@+id/iv_head_image"
+                        android:layout_width="@dimen/height_60"
+                        android:layout_height="@dimen/height_60"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/margin_left"
+                        android:background="@mipmap/shuiwu" />
+
+                    <TextView
+                        android:id="@+id/tv_nike"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:layout_marginTop="@dimen/margin_5"
+                        android:layout_toRightOf="@id/iv_head_image"
+                        android:text=""
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_size_20" />
+
+                    <TextView
+                        android:id="@+id/tv_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:layout_marginTop="@dimen/centre_margin"
+                        android:layout_toRightOf="@id/iv_head_image"
+                        android:text=""
+                        android:textSize="@dimen/text_size_18" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/iv_code"
+                    android:layout_width="@dimen/height_300"
+                    android:layout_height="@dimen/height_300"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dip"
+                    android:src="@mipmap/app_code" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/margin_10"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:text="@string/scan"
+                    android:textSize="@dimen/text_size_12" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

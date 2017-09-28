@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <include
+                layout="@layout/toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="40dip"
+
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="10dip">
+
+                <com.example.administrator.irrigationworks.Ui.badgeview.BGABadgeLinearLayout
+                    android:id="@+id/bga_rsite_management"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:visibility="gone"
+                    android:background="@color/white"
+                    android:clickable="true">
+
+                    <TextView
+                        android:id="@+id/tv_contionnma"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@id/iv_record_management"
+                        android:text="工地管理"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+                </com.example.administrator.irrigationworks.Ui.badgeview.BGABadgeLinearLayout>
+
+                <ListView
+                    android:id="@+id/lv_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dip"
+                    android:layout_marginTop="20dip"
+                    android:divider="#00000000">
+
+
+                </ListView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="10dip"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/online_camera"
+                        android:layout_width="70dip"
+                        android:layout_height="70dip"
+                        android:padding="4dip"
+                        android:src="@mipmap/camera_blue_icon"
+                        android:visibility="gone" />
+
+                    <GridView
+                        android:id="@+id/gridView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:numColumns="4"
+                        android:padding="@dimen/margin_8"
+                        android:scrollbars="none" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.2dip"
+                        android:background="@color/color_black"
+                        android:visibility="gone"></View>
+
+                    <ImageView
+                        android:id="@+id/online_img"
+                        android:layout_width="120dip"
+                        android:layout_height="120dip"
+                        android:layout_marginTop="10dip"
+                        android:padding="4dp"
+                        android:src="@mipmap/pic"
+                        android:visibility="gone" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.2dip"
+                        android:layout_marginTop="3dip"
+                        android:background="@color/color_black"></View>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/online_authid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="abcdefghijklmnopqrstuvwxyz0123456789_"
+                        android:hint="请输入注册图片的号码"
+                        android:maxLength="18"
+                        android:textSize="16sp">
+
+                        <requestFocus />
+                    </EditText>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/online_reg"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/login_button"
+                        android:padding="10dp"
+                        android:text="提交处理"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

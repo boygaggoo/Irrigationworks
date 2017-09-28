@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color"
+    android:orientation="vertical"
+    >
+    <ImageView
+        android:id="@+id/network_error"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:src="@mipmap/network_error"
+        android:layout_height="match_parent" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+
+    <include layout="@layout/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+
+        />
+
+    <LinearLayout
+    android:padding="10dip"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/onaji"
+        android:gravity="center_horizontal"
+        android:text="@string/reg_hint"
+
+        android:textSize="15sp" />
+        <ImageView
+            android:id="@+id/online_camera"
+            android:layout_width="100dip"
+            android:layout_height="100dip"
+            android:padding="4dip"
+            android:src="@mipmap/camera_blue_icon" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:orientation="vertical"
+        android:gravity="center" >
+
+
+        <View
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:background="@color/color_black"
+            android:layout_height="0.2dip"></View>
+        <RadioGroup
+            android:id="@+id/gps_radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|left"
+            android:layout_marginLeft="10dp"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:background="@color/color"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/online_detect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/check"
+                android:textColor="@android:color/black" />
+
+            <RadioButton
+                android:id="@+id/online_align"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/jujiao"
+                android:textColor="@android:color/black" />
+
+
+        </RadioGroup>
+<RelativeLayout
+    android:id="@+id/rl_total"
+    android:layout_width="300dip"
+    android:layout_height="250dip"
+    android:visibility="gone"
+    android:layout_marginTop="10dip"
+    >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/online_img"
+        android:layout_width="300dip"
+        android:layout_height="250dip"
+        android:padding="4dp"
+        android:src="@mipmap/pic" />
+
+</RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_chongxin"
+        android:layout_width="70dip"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:background="@mipmap/camera_blue_icon"
+        android:layout_marginBottom="20dip"
+        android:layout_height="70dip"
+        >
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_marginTop="3dip"
+            android:background="@color/color_black"
+            android:layout_height="0.2dip"></View>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+
+        android:layout_marginTop="5dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/online_authid"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:digits="abcdefghijklmnopqrstuvwxyz0123456789_"
+            android:hint="请输入注册图片的号码"
+            android:maxLength="18"
+            android:textSize="16sp" >
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+
+   
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/online_pick"
+            android:layout_width="0dp"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="选图"
+            android:textSize="20sp" />
+
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/online_reg"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/login_button"
+            android:padding="10dp"
+            android:text="注册"
+            android:textColor="@color/white" />
+        <Button
+            android:id="@+id/online_regs"
+            android:layout_width="fill_parent"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/login_button"
+            android:padding="10dp"
+            android:text="注册"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+
+</LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

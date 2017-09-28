@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_margin="3dp"
+
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/ll_total"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/workplan_show_note"
+            android:layout_width="0dp"
+            android:layout_marginLeft="10dip"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            android:gravity="center_vertical"
+
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text=""
+            android:layout_weight="1"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/iv_spread"
+                android:layout_width="40dip"
+                android:padding="10dip"
+                android:layout_height="40dip"
+                android:src="@mipmap/xiala"
+                android:layout_gravity="right"
+                />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+    android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_warining"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_height="match_parent"
+            android:textColor="@color/btn_yellow"
+            android:textSize="13sp"
+
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text=""
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="#F6F6F6"
+        android:layout_height="wrap_content">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_margin="5dip"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/tv_warining_time"
+        android:layout_width="0dip"
+        android:layout_marginLeft="10dip"
+        android:layout_height="match_parent"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:gravity="center_vertical"
+
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:text=""
+        android:layout_weight="1"/>
+    <TextView
+        android:id="@+id/tv_auditing"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textColor="@color/black"
+        android:layout_marginLeft="5dip"
+        android:textSize="13sp"
+        android:gravity="center_vertical"
+
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:text=""
+        />
+    <TextView
+        android:id="@+id/tv_chaoshi"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textColor="@color/black"
+        android:layout_marginLeft="5dip"
+        android:textSize="13sp"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:text=""
+        />
+
+</LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_hide"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/container_list_content"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                android:layout_height="wrap_content"
+
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/rl_signed_hour"
+                    android:gravity="center_vertical"
+                    android:textSize="13sp"
+                    android:layout_marginLeft="10dip"
+                    android:textColor="@color/black"
+                    android:text="状态:"
+                    android:layout_height="match_parent"
+                    />
+                <RelativeLayout
+                    android:layout_width="0dip"
+                    android:layout_marginLeft="5dip"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" >
+
+                    <ImageView
+                        android:id="@+id/rl_signed_hour"
+                        android:layout_width="match_parent"
+                        android:padding="5dip"
+                        android:layout_height="30dip"
+                        android:layout_weight="1"
+                        android:src="@mipmap/tongyong"
+                        android:checked="true"
+                        android:layout_margin="5dip"
+                        android:button="@null"
+                        android:layout_gravity="center"
+                        android:textColor="@drawable/font_white_pink_selector"
+                        android:gravity="center"
+
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/desc_text"
+                        android:layout_width="match_parent"
+                        android:layout_below="@+id/rl_signed_hour"
+                        android:gravity="center"
+
+                        android:textColor="@color/black"
+                        android:textSize="11sp"
+                        android:text="发现隐患"
+                        android:layout_height="wrap_content"
+                        />
+
+                </RelativeLayout>
+                <View
+                    android:layout_width="20dip"
+                    android:background="#CCCCCC"
+                    android:layout_gravity="center"
+                    android:layout_height="2dip"></View>
+
+                <RelativeLayout
+                    android:layout_width="0dip"
+                    android:layout_marginLeft="5dip"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" >
+                    <ImageView
+                        android:id="@+id/rl_signed_minrl_signed_min"
+                        android:layout_width="match_parent"
+                        android:padding="5dip"
+                        android:layout_height="30dip"
+                        android:layout_weight="1"
+                        android:layout_margin="5dip"
+                        android:src="@mipmap/tongyong"
+                        android:textColor="@drawable/font_white_pink_selector"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="去巡查"
+                        android:textSize="12sp" />
+                    <TextView
+                        android:id="@+id/main_bottom"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_below="@+id/rl_signed_minrl_signed_min"
+                        android:textColor="@color/black"
+                        android:text="隐患已读"
+                        android:textSize="11sp"
+                        android:layout_height="wrap_content"
+                        />
+
+                </RelativeLayout>
+                <View
+                    android:layout_width="20dip"
+                    android:background="#CCCCCC"
+                    android:layout_gravity="center"
+                    android:layout_height="2dip"></View>
+                <RelativeLayout
+                    android:layout_width="0dip"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginLeft="5dip"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" >
+
+                    <ImageView
+                        android:id="@+id/rl_zhenggai"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dip"
+                        android:padding="5dip"
+                        android:layout_margin="5dip"
+                        android:layout_weight="1"
+                        android:src="@mipmap/tongyong"
+                        android:textColor="@drawable/font_white_pink_selector"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="坐标采集"
+                        android:textSize="12sp" />
+                    <TextView
+                        android:id="@+id/desc_text2"
+                        android:layout_width="match_parent"
+                        android:layout_below="@+id/rl_zhenggai"
+                        android:textColor="@color/black"
+                        android:text="隐患整改"
+                        android:gravity="center"
+                        android:textSize="11sp"
+                        android:layout_height="wrap_content"
+                        />
+                </RelativeLayout>
+                <View
+                    android:layout_width="20dip"
+                    android:background="#CCCCCC"
+                    android:layout_gravity="center"
+                    android:layout_height="2dip"></View>
+                <RelativeLayout
+
+                    android:layout_width="0dip"
+                    android:layout_marginLeft="5dip"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_height="wrap_content" >
+                    <ImageView
+                        android:id="@+id/rl_shenghei"
+                        android:src="@mipmap/tongyong"
+                        android:padding="5dip"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dip"
+                        android:layout_margin="5dip"
+                        android:layout_weight="1"
+                        android:textColor="@drawable/font_white_pink_selector"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:textSize="12sp" />
+                    <TextView
+                        android:id="@+id/desc_text3"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_below="@+id/rl_shenghei"
+                        android:textColor="@color/black"
+                        android:textSize="11sp"
+                        android:text="审核完成"
+                        android:layout_height="wrap_content"
+                        />
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="#EBEBEB"
+            android:layout_height="10dip"></LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

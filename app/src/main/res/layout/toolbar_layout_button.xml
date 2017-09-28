@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="40dip"
+    android:background="@color/onaji"
+    android:minHeight="?attr/actionBarSize"
+
+    >
+
+        <ImageView
+            android:id="@+id/iv_back_left"
+            android:layout_width="40dip"
+            android:padding="10dip"
+            android:layout_height="40dip"
+            android:layout_gravity="left"
+            />
+
+    <TextView
+        android:id="@+id/toolbar_title"
+        style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lines="1"
+        android:ellipsize="end"
+        android:textSize="15dip"
+        android:text="title"
+        android:scrollHorizontally="true"
+        android:textColor="@color/white"
+        android:layout_gravity="center" />
+
+    <TextView
+
+        android:id="@+id/sendBt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发送"
+        android:layout_marginRight="15dip"
+        android:textColor="@android:color/white"
+        android:layout_gravity="right"
+        android:textSize="@dimen/text_size_20" />
+        />
+
+
+</android.support.v7.widget.Toolbar>

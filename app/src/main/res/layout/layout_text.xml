@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <com.example.administrator.irrigationworks.Ui.View.MapContainer
+                android:id="@+id/map_container"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dip">
+                <com.amap.api.maps.MapView
+                    android:id="@+id/map"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+
+
+                    ></com.amap.api.maps.MapView>
+            </com.example.administrator.irrigationworks.Ui.View.MapContainer>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="40dip"
+                android:layout_marginRight="40dip"
+                android:layout_marginTop="40dip"
+                android:background="@drawable/bg_border_stroke"
+
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/online_camera"
+                    android:layout_width="50dip"
+                    android:layout_height="50dip"
+                    android:padding="4dip"
+                    android:src="@mipmap/camera_blue_icon" />
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="40dip"
+                    android:layout_marginRight="40dip"
+                    android:layout_marginTop="40dip"
+                    android:background="@drawable/bg_border_stroke"
+                    android:gravity="clip_vertical">
+
+                    <ImageView
+                        android:id="@+id/online_img"
+
+                        android:layout_width="match_parent"
+
+                        android:layout_height="160dip"
+                        android:src="@mipmap/pic"
+
+                        />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

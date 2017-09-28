@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name">工地巡查</string>
+    <string name="gpsfollow">追随</string>
+    <string name="gpslocate">定位</string>
+    <string name="gpsrotate">旋转</string>
+    <string name="check">检测</string>
+    <string name="login_password">找回密码</string>
+    <string name="check_name">手机</string>
+    <string name="login_label_password">账号</string>
+    <string name="jujiao">聚焦</string>
+    <string name="reg_hint">请正对手机,确保光线充足.如果图片未能上传成功,是网络的原因,请重新拍照上传.</string>
+    <string name="reminder">温馨提示:</string>
+    <string name="action_settings">Settings</string>
+    <string name="app_id">598acbbe</string>
+    <string name="you_have_sign">有字体为巡查记录</string>
+
+
+    <!-- 下拉刷新,上拉加载 -->
+    <string name="refresh_footer_more">查看更多</string>
+    <string name="refresh_header_pull">下拉刷新</string>
+    <string name="refresh_header_date">上次更新时间：</string>
+    <string name="pull_to_refresh">下拉刷新</string>
+    <string name="release_to_refresh">释放刷新</string>
+    <string name="refreshing">正在刷新...</string>
+    <string name="refresh_succeed">刷新成功</string>
+    <string name="refresh_fail">刷新失败</string>
+    <string name="pullup_to_load">上拉加载更多</string>
+    <string name="release_to_load">释放立即加载</string>
+    <string name="load_succeed">加载成功</string>
+    <string name="load_fail">加载失败</string>
+
+    <!--下拉刷新bin-->
+    <string name="not_updated_yet">暂未更新过</string>
+    <string name="updated_at">上次更新于%1$s前</string>
+    <!--<string name="updated_just_now">刚刚更新</string>-->
+    <string name="updated_just_now"></string>
+    <string name="time_error">时间有问题</string>
+    <!--headANdfootloding-->
+    <string name="loading">加载中…</string>
+    <string name="head_loading_put">释放进行刷新数据</string>
+    <string name="head_loading_on">下拉进行刷新</string>
+    <string name="no_result">对不起，没有搜索到相关数据！</string>
+
+    <!--图片预览-->
+    <string name="mis_permission_rationale">要读取文件需要存储读权限。！</string>
+    <string name="mis_permission_dialog_title">许可否认</string>
+    <string name="mis_permission_dialog_ok">确定</string>
+    <string name="mis_permission_dialog_cancel">取消</string>
+    <!--忘记密码-->
+    <string name="inputoldpassword">请输入旧密码</string>
+    <string name="newpassword">新密码</string>
+    <string name="inputnewpassword">请输入新密码</string>
+    <string name="Confirmpassword">确认密码</string>
+    <string name="pleaseconfirmpassword">请确认新密码</string>
+    <string name="pwd_trim">密码由6-20位数字+英文组合而成</string>
+    <string name="makesure1">确定</string>
+
+    <string name="touch_the_map">地图触摸事件</string>
+    <string name="move_the_camera">移动camera</string>
+    <string name="tap_instructions">点击或者长按地图</string>\
+
+    <string name="setpassword">修改密码</string>
+
+    <string name="set_nfc">安卓版本下载</string>
+    <string name="write_off">注销</string>
+
+    <string name="set_orc">ISO版本下载</string>
+    <string name="set_aliens">注销</string>
+    <string name="scan">扫一扫上面的二维码下载软件</string>
+</resources>

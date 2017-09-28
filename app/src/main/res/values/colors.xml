@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="color">#FFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="barview">#CCCCCC</color>
+    <color name="bartomtom">#FCFCFC</color>
+    <color name="grey"> #ebebeb</color>
+    <color name="color_black">#000000</color>
+    <color name="langan">#EEEDF3</color>
+    <color name="ziti">#FFFFFF</color>
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_orange">#ff9900</color>
+    <color name="color_gray6">#666666</color>
+    <color name="color_background">#ECF1F5</color>
+    <color name="gray_login">#BCBCBC</color>
+    <!-- 新增加 -->
+    <color name="btn_yellow">#FACE00</color>
+    <color name="graytext">#7d7d7d</color>
+    <color name="pagebg">#E0E0E0</color>
+    <!--<color name="onaji">#11C2EE</color> &lt;!&ndash;红色 &ndash;&gt;-->
+    <color name="onaji">#0D57BA</color> <!--红色 -->
+    <color name="biejing">#1B92D2</color> <!--红色 -->
+    <color name="dian">#D10B3E</color> <!--红色 -->
+    <color name="app_transparent">#00000000</color>
+    <color name="workToolbar">#71CBFF</color>
+    <color name="black_one">#757575</color>
+    <color name="line_color">#EBEBEB</color>
+    <color name="workToolbar_record">#35627F</color>
+    <color name="workToolbar_line">#DDDDDD</color>
+    <color name="seletor_text_color">#4E4E4E</color>
+    <color name="workToolbar_one">#6CC9FF</color>
+    <color name="workToolb">#197EEB</color>
+    <color name="online">#7398AB</color>
+    <color name="workToolba">#189898</color>
+    <color name="grayCC">#CCCCCC</color>
+    <color name="grayff">#333333</color>
+    <color name="homeworked_shape">#666666</color>
+    <color name="whiteEE">#EEEEEE</color>
+    <color name="darkslateblue">#548BCB</color> <!--暗灰蓝色 -->
+    <color name="shuiwu">#00CCFF</color> <!--暗灰蓝色 -->
+    <color name="selectColor">#14A7DC</color>
+    <color name="norColor">#9092A2</color>
+    <color name="dodgerblue">#1E90FF</color> <!--闪兰色 -->
+    <color name="blue">#0000FF</color> <!--蓝色 -->
+    <color name="transparent">#00000000</color>
+    <color name="orange">#FFA500</color> <!--橙色 -->
+
+
+    <!--选择图片-->
+    <color name="light_gray">#99a4b7</color>
+    <color name="editext">#D9D9D9</color>
+    <color name="editext_hint">#AAAAAA</color>
+    <color name="deep_gray">#394257</color>
+    <color name="border_gray">#d9dfe5</color>
+    <color name="bg_gray">#e1e1e1</color>
+    <color name="btn_gray">#d1d1d1</color>
+    <color name="glass_gall">#c2ebef</color>
+    <color name="black">#ff000000</color>
+    <color name="chechword">#1873BA</color>
+    <color name="light_blue">#87d0f2</color>
+    <color name="color_gray_d9d9d9">#87d0f2</color>
+    <color name="gray_F5">#F5F5F5</color>
+    <!--协议码-->
+    <color name="result_view">#b0000000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <!--拍照dialog-->
+    <color name="color_black_333333">#333333</color>
+    <!--已上传-->
+    <color name="curriculum_send">#999999</color>
+    <color name="gray999">#999999</color>
+    <color name="gray333">#333333</color>
+    <color name="gray666">#666666</color>
+    <color name="blue7eb">#1977EB</color>
+    <!-- main bg color -->
+    <color name="main_bg_color">#FFFFFF</color>
+    <color name="color_activity_blue_bg">#f7389fff</color>
+    <color name="color_holder_bottom">#353541</color>
+    <color name="split_line_grey_color_d9d9d9">#D9D9D9</color>
+    <!-- ORc -->
+    <color name="grey_c">#ff2282e6</color>
+    <color name="text_hint">#f6f6f6</color>
+    <color name="app_primary_color">#ff2282e6</color>
+    <color name="app_primary_dark_color">#ff3f83ca</color>
+    <color name="gray">#ffeeeeec</color>
+    <color name="divide_line">#ffd2d2d2</color>
+    <color name="loc">#5186B2</color>
+
+    <color name="gray_text_pay">#ff787878</color>
+    <color name="loading_dialog_bg">#4F000000</color>
+    <color name="bg_press">#fff0ede9</color>
+    <color name="warinning">#FFFFFF</color>
+
+    <color name="txt_title">#8a8a8a</color>
+    <color name="color_BG4">#ff000000</color>
+    <!--城市选择器-->
+    <color name="listview_driver">#eeeeee</color>
+    <color name="green">#e581ff02</color>
+    <color name="bg">#4d4d4d</color>
+    <color name="act_background">#efefef</color>
+    <color name="gary">#898989</color>
+    <color name="phone_bg">#f6f6f6</color>
+    <color name="btn_pressed">#5E9CF0</color>
+    <color name="gray1">#E7E7E7</color>
+    <color name="hex_1b89cd">#FF1B89CD</color>
+    <color name="hex_e9e9ea">#FFE9E9EA</color>
+    <color name="hex_9c9c9c">#FF9C9C9C</color>
+    <string name="much_score_int">%1$d 分</string>
+
+    <color name="submit_btn_normal">@color/hex_1b89cd</color>
+    <color name="submit_btn_pressed">#166EA5</color>
+    <color name="submit_btn_disabled">@color/hex_bcbcbc</color>
+    <color name="hex_bcbcbc">#FFBCBCBC</color>
+</resources>

@@ -1,0 +1,63 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:orientation="vertical"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_height="match_parent">
+	<include
+		layout="@layout/toolbar_layout_button"
+		android:layout_width="match_parent"
+		android:layout_height="40dip"
+
+		/>
+	<RelativeLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:background="@color/editext">
+
+		<EditText
+			android:id="@+id/et_edittext"
+			android:layout_width="match_parent"
+			android:layout_height="50dip"
+			android:background="@null"
+			android:enabled="true"
+			android:gravity="top"
+			android:hint="请输入备注"
+			android:maxLength="300"
+			android:maxLines="10"
+			android:padding="4dp"
+			android:textColorHint="@color/editext_hint"
+			android:textSize="15sp" />
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:layout_below="@+id/et_edittext"
+			android:layout_marginRight="5dip"
+			android:gravity="right"
+			android:text="字数限制5-50字"
+			android:textColor="@color/editext_hint"
+			android:textSize="16sp" />
+
+	</RelativeLayout>
+	<ImageView
+		android:id="@+id/network_error"
+		android:layout_width="match_parent"
+		android:visibility="gone"
+		android:src="@mipmap/network_error"
+		android:layout_height="match_parent" />
+
+	<GridView
+		android:id="@+id/gridView"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:numColumns="4"
+		android:padding="@dimen/margin_8"
+		android:scrollbars="none"
+		/>
+
+
+
+
+
+</LinearLayout>

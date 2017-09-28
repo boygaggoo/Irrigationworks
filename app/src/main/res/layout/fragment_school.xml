@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+
+        android:id="@+id/rl_charoom_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:background="@color/workToolbar">
+
+
+        <LinearLayout
+            android:id="@+id/school_title"
+            android:layout_width="200dp"
+            android:layout_height="40dip"
+
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/dialog_generic_layout_bottom"
+                android:layout_width="150dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="5dip"
+                android:paddingLeft="6dip"
+                android:paddingRight="6dip"
+                android:paddingTop="5dip">
+                <TextView
+                    android:id="@+id/tv_approve_show_title"
+                    style="@style/TitleStyle"
+                    />
+
+                <Button
+                    android:id="@+id/btn_schoolfragment_conversation"
+                    android:layout_width="0.0dip"
+                    android:background="@drawable/btn_selector_contacts"
+
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:padding="0dip"
+                    android:text="会话"
+
+                    android:textSize="16sp" />
+                <Button
+                    android:id="@+id/btn_schoolfragment_contacts"
+                    android:layout_width="0.0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:background="@drawable/btn_selector_contacts"
+
+                    android:padding="0dp"
+                    android:text="通讯录"
+                    android:textSize="16sp" />
+
+                <!--<View-->
+                <!--android:layout_width="1dip"-->
+                <!--android:layout_height="fill_parent"-->
+                <!--android:background="#E3E0D5" />-->
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/iv_schoolfragment_contacts"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentLeft="true"
+            android:layout_width="50dip"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_height="50dip"
+            android:padding="8dip"
+            android:focusable="false"
+            android:scaleType="centerInside"
+            ></ImageView>
+
+
+        <!--<ImageView-->
+            <!--android:id="@+id/iv_add"-->
+            <!--android:layout_width="50dip"-->
+            <!--android:layout_height="50dip"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:gravity="center_horizontal|center_vertical"-->
+            <!--android:padding="8dip"-->
+            <!--android:src="@mipmap/add_friend3x"-->
+            <!--android:textColor="#ffffff" />-->
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/menu_s_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/rl_charoom_title"
+        android:layout_gravity="center"
+        android:layout_marginLeft="1dip"
+        android:layout_marginRight="1dip"
+        android:layout_marginTop="1.5dip"
+        android:background="#FFFFFF"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dip"
+            android:layout_marginLeft="1dip"
+            android:layout_marginRight="1dip"
+            android:layout_marginTop="5dip"
+            android:layout_weight="1"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/tv_contact_sreach_pic"
+                android:layout_width="0dip"
+                android:layout_height="33dp"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="@null"
+                android:drawablePadding="10dp"
+                android:paddingLeft="20dp"
+                android:singleLine="true"
+                android:textSize="@dimen/text_size_15" />
+
+            <ImageView
+                android:id="@+id/iv_delete"
+                android:layout_width="50dip"
+                android:layout_height="30dip"
+                android:layout_marginRight="10dip"
+                android:layout_toRightOf="@+id/tv_contact_sreach_pic"
+                android:padding="6dip"
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/friendShapes"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/menu_s_title"
+        android:layout_marginLeft="10dip"
+        android:layout_marginTop="10dip"
+        android:background="@color/transparent"
+        android:minHeight="50dip"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/friendShape"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/head_layout"
+                android:layout_width="50dp"
+                android:layout_height="55dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="5dip"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/contacts_item_head"
+                    android:layout_width="50dip"
+                    android:layout_height="55dip"
+                    android:scaleType="centerCrop" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/contacts_item_name_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:layout_toRightOf="@id/head_layout"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/contacts_item_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:drawablePadding="4dip"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+
+                <TextView
+                    android:id="@+id/contacts_item_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="1dp"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="#999999"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/viewPager_school_charoom"
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+        android:layout_below="@+id/friendShapes" />
+
+
+    <ListView
+        android:id="@+id/searchResultList"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/friendShapes"
+        android:cacheColorHint="@color/transparent"
+        android:background="#FFFFFF"
+        android:divider="@color/transparent"
+        android:dividerHeight="0dp"
+        android:scrollbars="none" />
+
+
+</RelativeLayout>

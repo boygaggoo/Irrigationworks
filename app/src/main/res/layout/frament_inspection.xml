@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EBEBEB"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/anquan"
+                android:orientation="vertical">
+                <!--今日天气信息-->
+                <RelativeLayout
+                    android:id="@+id/weather_today"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="10.0dip">
+
+                    <!--城市名称-->
+                    <TextView
+                        android:id="@+id/city"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="15.0dip"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@android:color/white"
+                        android:textSize="40.0sp" />
+
+                    <!--发布时间-->
+                    <TextView
+                        android:id="@+id/time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/city"
+                        android:layout_marginLeft="15.0dip"
+                        android:layout_marginTop="5.0dip"
+                        android:singleLine="true"
+                        android:text="预警:"
+                        android:textColor="@color/color_black"
+                        android:textSize="15.0sp"
+                        android:visibility="gone" />
+
+                    <!--湿度信息-->
+                    <TextView
+                        android:id="@+id/humidity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/time"
+                        android:layout_marginLeft="15.0dip"
+                        android:layout_marginTop="5dip"
+                        android:singleLine="true"
+                        android:text="内部预警:"
+                        android:textColor="@color/color_black"
+                        android:textSize="15.0sp"
+                        android:visibility="gone" />
+
+                    <!--当前温度信息-->
+                    <TextView
+                        android:id="@+id/currentTemperature"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/humidity"
+                        android:layout_marginLeft="15.0dip"
+                        android:layout_marginTop="5dip"
+                        android:singleLine="true"
+                        android:text="新产生"
+                        android:textColor="@color/color_black"
+                        android:textSize="15.0sp"
+                        android:visibility="gone" />
+
+                    <!--PM 2.5整体信息块-->
+                    <LinearLayout
+                        android:id="@+id/pm2_5_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:orientation="vertical">
+
+                        <!--PM2.5详情-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="6.0dip"
+                            android:paddingLeft="12.0dip"
+                            android:paddingTop="6.0dip">
+                            <!--PM2.5文字详情-->
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <!--污染等级（重度污染）-->
+                        <TextView
+                            android:id="@+id/pm2_5_quality"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="重度污染"
+                            android:textColor="@android:color/white"
+                            android:textSize="20.0sp"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <!--今日天气信息块-->
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/humidity"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="30.0dip">
+
+
+                        <RelativeLayout
+                            android:id="@+id/info"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true">
+
+                            <!--<RelativeLayout-->
+                            <!--android:id="@+id/info"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_toRightOf="@+id/weather_img">-->
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="1dip"-->
+                <!--android:background="@color/black" />-->
+            </LinearLayout>
+
+            <com.example.administrator.irrigationworks.Ui.badgeview.BGABadgeLinearLayout
+                android:id="@+id/bga_rsite_management"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@color/white"
+                android:clickable="true"
+                android:paddingLeft="12dp">
+
+                <RelativeLayout
+                    android:layout_width="29dip"
+                    android:layout_height="29dip"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <com.example.administrator.irrigationworks.Ui.badgeview.BGABadgeImageView
+                        android:id="@+id/iv_site_management"
+                        android:layout_width="30dip"
+                        android:layout_marginLeft="2dip"
+
+                        android:layout_height="30dip"
+                        android:layout_centerHorizontal="true"
+
+                        android:focusable="false"
+                        android:scaleType="centerInside"
+                        android:src="@mipmap/gd1" />
+
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/iv_record_management"
+                    android:text="工地管理"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </com.example.administrator.irrigationworks.Ui.badgeview.BGABadgeLinearLayout>
+
+            <View
+                android:id="@+id/view0"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_width="match_parent"
+                android:layout_height="0.2dip"
+                android:background="@color/color_black"></View>
+
+            <com.example.administrator.irrigationworks.Ui.badgeview.BGABadgeLinearLayout
+                android:id="@+id/bga_record_management"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@color/white"
+                android:clickable="true"
+                android:paddingLeft="12dp">
+
+                <RelativeLayout
+                    android:layout_width="29dip"
+                    android:layout_height="29dip"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <com.example.administrator.irrigationworks.Ui.badgeview.BGABadgeImageView
+                        android:id="@+id/iv_record_management"
+                        android:layout_width="23dip"
+
+                        android:layout_height="23dip"
+                        android:layout_centerHorizontal="true"
+
+                        android:focusable="false"
+                        android:scaleType="centerInside"
+                        android:src="@mipmap/dongpianqu" />
+
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/iv_record_management"
+                    android:text="东片区任务"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </com.example.administrator.irrigationworks.Ui.badgeview.BGABadgeLinearLayout>
+
+            <View
+                android:id="@+id/view1"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_width="match_parent"
+                android:layout_height="0.2dip"
+                android:background="@color/color_black"></View>
+
+            <com.example.administrator.irrigationworks.Ui.badgeview.BGABadgeLinearLayout
+                android:id="@+id/bga_Leave_management"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@color/white"
+                android:clickable="true"
+                android:paddingLeft="12dp">
+
+                <RelativeLayout
+                    android:layout_width="29dip"
+                    android:layout_height="29dip"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <com.example.administrator.irrigationworks.Ui.badgeview.BGABadgeImageView
+                        android:id="@+id/iv_Leave_management"
+                        android:layout_width="23dip"
+                        android:layout_height="23dip"
+                        android:layout_centerHorizontal="true"
+
+                        android:focusable="false"
+                        android:scaleType="centerInside"
+                        android:src="@mipmap/xipianqu" />
+
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/iv_Leave_management"
+                    android:text="西片区任务"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </com.example.administrator.irrigationworks.Ui.badgeview.BGABadgeLinearLayout>
+
+            <View
+                android:id="@+id/view2"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_width="match_parent"
+                android:layout_height="0.2dip"
+
+                android:background="@color/color_black"></View>
+
+            <com.example.administrator.irrigationworks.Ui.badgeview.BGABadgeLinearLayout
+                android:id="@+id/bga_attendance_reminde"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@color/white"
+                android:clickable="true"
+                android:paddingLeft="12dp">
+
+                <RelativeLayout
+                    android:layout_width="29dip"
+                    android:layout_height="29dip"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <com.example.administrator.irrigationworks.Ui.badgeview.BGABadgeImageView
+                        android:id="@+id/iv_attendance_reminde"
+                        android:layout_width="23dip"
+                        android:layout_height="23dip"
+                        android:layout_centerHorizontal="true"
+
+                        android:focusable="false"
+                        android:scaleType="centerInside"
+                        android:src="@mipmap/zhongpianqu" />
+
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/iv_attendance_reminde"
+                    android:text="中片区任务"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </com.example.administrator.irrigationworks.Ui.badgeview.BGABadgeLinearLayout>
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_height="0.2dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:background="@color/color_black"></View>
+
+            <com.example.administrator.irrigationworks.Ui.badgeview.BGABadgeLinearLayout
+                android:id="@+id/bga_hidden_danger_warning"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@color/white"
+                android:clickable="true"
+                android:paddingLeft="12dp">
+
+                <RelativeLayout
+                    android:layout_width="29dip"
+                    android:layout_height="29dip"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <com.example.administrator.irrigationworks.Ui.badgeview.BGABadgeImageView
+                        android:id="@+id/ivHiddenDangerWarning"
+                        android:layout_width="23dip"
+                        android:layout_height="23dip"
+                        android:layout_centerHorizontal="true"
+
+                        android:focusable="false"
+                        android:scaleType="centerInside"
+                        android:src="@mipmap/yinhuanjinggao" />
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/ivHiddenDangerWarning"
+                    android:text="隐患警告"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </com.example.administrator.irrigationworks.Ui.badgeview.BGABadgeLinearLayout>
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="match_parent"
+                android:layout_height="0.2dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:background="@color/color_black"></View>
+
+            <com.example.administrator.irrigationworks.Ui.badgeview.BGABadgeLinearLayout
+                android:id="@+id/bga_historical_inspections"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@color/white"
+                android:clickable="true"
+                android:paddingLeft="12dp">
+
+                <RelativeLayout
+                    android:layout_width="29dip"
+                    android:layout_height="29dip"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <com.example.administrator.irrigationworks.Ui.badgeview.BGABadgeImageView
+                        android:id="@+id/iv_historical_inspections"
+                        android:layout_width="25dip"
+                        android:layout_height="25dip"
+                        android:layout_marginLeft="2dip"
+                        android:layout_centerHorizontal="true"
+
+                        android:focusable="false"
+                        android:scaleType="centerInside"
+                        android:src="@mipmap/lishixuncha" />
+
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/iv_historical_inspections"
+                    android:text="历史巡查"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </com.example.administrator.irrigationworks.Ui.badgeview.BGABadgeLinearLayout>
+
+            <View
+                android:id="@+id/view5"
+                android:layout_width="match_parent"
+                android:layout_height="0.2dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:background="@color/color_black"></View>
+
+            <com.example.administrator.irrigationworks.Ui.badgeview.BGABadgeLinearLayout
+                android:id="@+id/bga_hazard_list"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@color/white"
+                android:clickable="true"
+                android:paddingLeft="12dp">
+
+                <RelativeLayout
+                    android:layout_width="29dip"
+                    android:layout_height="29dip"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <com.example.administrator.irrigationworks.Ui.badgeview.BGABadgeImageView
+                        android:id="@+id/iv_hazard_list"
+                        android:layout_width="23dip"
+                        android:layout_height="23dip"
+                        android:layout_centerHorizontal="true"
+
+                        android:focusable="false"
+                        android:scaleType="centerInside"
+                        android:src="@mipmap/yinhuanliebiao" />
+
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/iv_hazard_list"
+                    android:text="隐患列表"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </com.example.administrator.irrigationworks.Ui.badgeview.BGABadgeLinearLayout>
+
+
+            <View
+                android:id="@+id/view6"
+                android:layout_width="match_parent"
+                android:layout_height="0.2dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:background="@color/color_black"></View>
+
+
+            <com.example.administrator.irrigationworks.Ui.badgeview.BGABadgeLinearLayout
+                android:id="@+id/bga_construction_site"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:clickable="true"
+                android:paddingLeft="12dp"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="29dip"
+                    android:layout_height="29dip"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <com.example.administrator.irrigationworks.Ui.badgeview.BGABadgeImageView
+                        android:id="@+id/iv_construction_site"
+                        android:layout_width="30dip"
+                        android:layout_height="30dip"
+                        android:layout_centerHorizontal="true"
+
+                        android:focusable="false"
+                        android:scaleType="centerInside"
+                        android:src="@mipmap/jianshegongdi" />
+
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/iv_hazard_list"
+                    android:text="建设工地图册"
+                    android:textColor="#5B5B5B"
+                    android:textSize="16sp" />
+            </com.example.administrator.irrigationworks.Ui.badgeview.BGABadgeLinearLayout>
+
+
+            <View
+                android:id="@+id/view7"
+                android:layout_width="match_parent"
+                android:layout_height="0.2dip"
+                android:layout_margin="1dip"
+                android:background="@color/color_black"
+                android:visibility="gone"></View>
+
+            <com.example.administrator.irrigationworks.Ui.badgeview.BGABadgeLinearLayout
+                android:id="@+id/bga_view_album"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:clickable="true"
+                android:paddingLeft="12dp"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="29dip"
+                    android:layout_height="29dip"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <com.example.administrator.irrigationworks.Ui.badgeview.BGABadgeImageView
+                        android:id="@+id/iv_view_album"
+                        android:layout_width="30dip"
+                        android:layout_height="30dip"
+                        android:layout_centerHorizontal="true"
+
+                        android:focusable="false"
+                        android:scaleType="centerInside"
+                        android:src="@mipmap/shagnc" />
+
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/iv_hazard_list"
+                    android:text="查看图册"
+                    android:textColor="#5B5B5B"
+                    android:textSize="16sp" />
+            </com.example.administrator.irrigationworks.Ui.badgeview.BGABadgeLinearLayout>
+
+
+            <View
+                android:id="@+id/view8"
+                android:layout_width="match_parent"
+                android:layout_height="0.2dip"
+                android:layout_margin="1dip"
+                android:background="@color/color_black"
+                android:visibility="gone"></View>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+</LinearLayout>

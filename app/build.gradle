@@ -1,0 +1,87 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'kingsam'
+            keyPassword 'kingsam'
+            storeFile file('/Users/YZBbanban/Desktop/irrigationworks')
+            storePassword 'kingsam'
+        }
+        debug {
+            keyAlias 'kingsam'
+            keyPassword 'kingsam'
+            storeFile file('/Users/YZBbanban/Desktop/irrigationworks')
+            storePassword 'kingsam'
+        }
+    }
+    compileSdkVersion 23
+    buildToolsVersion '25.0.0'
+
+    defaultConfig {
+        applicationId "com.example.administrator.irrigationworks"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+    }
+    dexOptions {
+        incremental true
+        javaMaxHeapSize "4g"
+        //关闭编译
+        preDexLibraries = false
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.release
+
+        }
+    }
+    //添加如下配置就ok了
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile files('libs/butterknife-7.0.1.jar')
+    compile files('libs/universal-image-loader-1.9.4.jar')
+    compile files('libs/AMap_Location_V3.4.0_20170427.jar')
+    //    compile files('libs/gson-2.3.1.jar')
+    compile files('libs/fastjson-1.2.2.jar')
+    compile files('libs/AMap_Search_V5.0.0_20170309.jar')
+    //    compile 'com.squareup.retrofit2:retrofit:2.0.0-beta4'//Retrofit2所需要的包
+    //    compile 'com.squareup.retrofit2:converter-gson:2.0.0-beta4'//ConverterFactory的Gson依赖包
+    //    compile 'com.squareup.retrofit2:converter-scalars:2.0.0-beta4'//ConverterFactory的String依赖包
+    compile project(':library')
+    compile files('libs/jpush-android-3.0.8.jar')
+    compile files('libs/slf4j-api-1.7.7.jar')
+    compile files('libs/jpush-client-3.2.7.jar')
+    //  图片加载
+    compile project(':multi-image-selector')
+    //  litepal数据库
+    compile files('libs/Amap_2DMap_V5.2.0_20170627.jar')
+    compile files('libs/AMap_3DMap_V2.4.0.jar')
+    compile files('libs/commons-beanutils.jar')
+    compile files('libs/json-lib-1.1-jdk13.jar')
+    compile files('libs/volley.jar')
+    compile files('libs/bugly_crash_release.jar')
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:recyclerview-v7:23.2.1'
+    compile 'com.google.code.gson:gson:2.8.0'
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit:converter-gson:2.0.0-beta2'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    compile 'com.github.bumptech.glide:glide:3.5.2'
+    compile 'com.squareup.picasso:picasso:2.5.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+    compile 'com.github.bumptech.glide:glide:3.7.0'//图片加载
+}

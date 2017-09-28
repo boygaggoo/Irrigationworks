@@ -1,0 +1,154 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+	android:orientation="vertical"
+    android:layout_height="match_parent"
+    >
+	<include
+		layout="@layout/toolbar_layout"
+		android:layout_width="match_parent"
+		android:layout_height="40dip"
+
+		/>
+	<com.example.administrator.irrigationworks.Ui.uiview.CustomViewPage
+		android:id="@+id/viewpager_app"
+
+		android:layout_width="match_parent"
+		android:layout_height="0dip"
+		android:layout_weight="1"
+
+		></com.example.administrator.irrigationworks.Ui.uiview.CustomViewPage>
+	<LinearLayout
+		android:id="@+id/main_bottom"
+		android:layout_width="match_parent"
+		android:layout_height="63dp"
+		android:background="@color/white"
+		android:gravity="center_vertical"
+		android:orientation="horizontal">
+
+		<RelativeLayout
+			android:id="@+id/re_school"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:onClick="onTabClicked"
+			android:padding="3dp">
+
+
+			<com.example.administrator.irrigationworks.Ui.badgeview.BGABadgeLinearLayout
+				android:id="@+id/mLayWord"
+				android:layout_width="60dp"
+				android:layout_height="match_parent"
+				android:layout_centerHorizontal="true"
+				android:gravity="center"
+				android:orientation="vertical">
+
+				<com.example.administrator.irrigationworks.Ui.badgeview.BGABadgeImageView
+					android:id="@+id/iv_word"
+					android:layout_width="30dip"
+					android:layout_height="30dip"
+					android:layout_centerHorizontal="true"
+
+					android:focusable="false"
+					android:scaleType="centerInside"
+					android:src="@drawable/sc_checkword" />
+
+				<TextView
+					android:id="@+id/tv_word_list"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerHorizontal="true"
+					android:layout_marginTop="3dp"
+					android:text="考勤打卡"
+					android:textColor="@color/norColor"
+					android:textSize="12sp" />
+
+
+			</com.example.administrator.irrigationworks.Ui.badgeview.BGABadgeLinearLayout>
+
+
+
+		</RelativeLayout>
+
+
+		<RelativeLayout
+			android:id="@+id/re_info"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:onClick="onTabClicked"
+			android:padding="3dp">
+
+
+			<com.example.administrator.irrigationworks.Ui.badgeview.BGABadgeLinearLayout
+				android:id="@+id/mLayinfo"
+				android:layout_width="60dp"
+				android:layout_height="match_parent"
+				android:layout_centerHorizontal="true"
+				android:gravity="center"
+				android:orientation="vertical">
+
+				<com.example.administrator.irrigationworks.Ui.badgeview.BGABadgeImageView
+					android:id="@+id/ib_info"
+					android:layout_width="30dip"
+					android:layout_height="30dip"
+					android:layout_centerHorizontal="true"
+					android:focusable="false"
+					android:scaleType="centerInside"
+					android:src="@drawable/sc_notics" />
+
+				<TextView
+					android:id="@+id/tv_profile_info"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerHorizontal="true"
+					android:layout_marginTop="3dp"
+					android:text="公告"
+					android:textColor="#9A9A9A"
+					android:textSize="12sp" />
+			</com.example.administrator.irrigationworks.Ui.badgeview.BGABadgeLinearLayout>
+		</RelativeLayout>
+
+
+		<RelativeLayout
+			android:id="@+id/re_mine"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_weight="1"
+			android:onClick="onTabClicked"
+			android:padding="3dp">
+
+
+			<com.example.administrator.irrigationworks.Ui.badgeview.BGABadgeLinearLayout
+				android:id="@+id/mLayMine"
+				android:layout_width="60dp"
+				android:layout_height="match_parent"
+				android:layout_centerHorizontal="true"
+				android:gravity="center"
+				android:orientation="vertical">
+
+				<com.example.administrator.irrigationworks.Ui.badgeview.BGABadgeImageView
+					android:id="@+id/ib_mine"
+					android:layout_width="30dip"
+					android:layout_height="30dip"
+					android:layout_centerHorizontal="true"
+					android:focusable="false"
+					android:scaleType="centerInside"
+					android:src="@drawable/sc_integrated_management" />
+
+				<TextView
+					android:id="@+id/tv_profile_mine"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerHorizontal="true"
+					android:layout_marginTop="3dp"
+					android:text="综合管理"
+					android:textColor="#9A9A9A"
+					android:textSize="12sp" />
+			</com.example.administrator.irrigationworks.Ui.badgeview.BGABadgeLinearLayout>
+		</RelativeLayout>
+	</LinearLayout>
+</LinearLayout>
+
+
+

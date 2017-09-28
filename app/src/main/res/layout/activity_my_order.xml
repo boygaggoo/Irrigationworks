@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <include layout="@layout/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+
+        />
+    <app.dinus.com.loadingdrawable.LoadingView
+        android:id="@+id/electric_fan_view"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="match_parent"
+        android:background="#ffd4d9da"
+        app:loading_renderer="BalloonLoadingRenderer" />
+
+
+    <ListView
+        android:id="@+id/lv_order"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ListView>
+
+
+</LinearLayout>

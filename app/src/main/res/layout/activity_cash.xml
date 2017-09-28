@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:hyphenate="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/ll_main"
+              android:orientation="vertical"
+              android:background="@color/gray1"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <include
+        layout="@layout/toolbar_layout_button"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+
+        />
+
+
+
+    <LinearLayout
+        android:id="@+id/ll_bank"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:layout_marginTop="10dip"
+        android:layout_marginBottom="@dimen/margin_10"
+        android:layout_marginLeft="@dimen/margin_left"
+        android:layout_marginRight="@dimen/margin_left"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_rectangle_while"
+        >
+
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:text="负责人"
+            android:textSize="@dimen/text_size_20"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/et_bank"
+            android:background="@null"
+            android:layout_gravity="center_vertical"
+            android:hint=""
+            android:layout_width="0dp"
+            android:textSize="@dimen/text_size_20"
+            android:layout_weight="6"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:layout_marginBottom="@dimen/margin_10"
+        android:layout_marginLeft="@dimen/margin_left"
+        android:layout_marginRight="@dimen/margin_left"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_rectangle_while"
+        >
+
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:text="单位"
+            android:textSize="@dimen/text_size_20"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/et_name"
+            android:background="@null"
+            android:layout_gravity="center_vertical"
+            android:layout_width="0dp"
+            android:textSize="@dimen/text_size_20"
+            android:layout_weight="6"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:layout_marginBottom="@dimen/margin_10"
+        android:layout_marginLeft="@dimen/margin_left"
+        android:layout_marginRight="@dimen/margin_left"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_rectangle_while"
+        >
+
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:text="电话"
+            android:textSize="@dimen/text_size_20"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/et_account"
+            android:background="@null"
+            android:layout_gravity="center_vertical"
+            android:layout_width="0dp"
+            android:textSize="@dimen/text_size_20"
+            android:layout_weight="6"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:layout_marginBottom="@dimen/margin_10"
+        android:layout_marginLeft="@dimen/margin_left"
+        android:layout_marginRight="@dimen/margin_left"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_rectangle_while"
+        >
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:text="问题"
+            android:textSize="@dimen/text_size_20"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"/>
+
+
+        <EditText
+            android:id="@+id/et_money"
+            android:background="@null"
+            android:layout_gravity="center_vertical"
+            android:textSize="@dimen/text_size_20"
+            android:inputType="number"
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/iv_del"
+            android:clickable="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/margin_10"
+            android:layout_width="@dimen/margin_left"
+            android:layout_height="@dimen/margin_left"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_image_height">
+
+        <TextView
+            android:id="@+id/tv_overstep"
+            android:layout_marginLeft="@dimen/text_margin_left"
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:textSize="@dimen/text_size_money"
+            android:visibility="gone"
+            android:layout_height="@dimen/text_margin_left"/>
+
+        <LinearLayout
+            android:id="@+id/ll_balance"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="@dimen/text_margin_left">
+
+            <ImageView
+                android:layout_marginLeft="@dimen/text_margin_left"
+                android:layout_width="@dimen/margin_left"
+                android:layout_height="@dimen/margin_left"
+                />
+
+
+
+
+            <TextView
+                android:id="@+id/tv_balance"
+                android:text=""
+                android:layout_marginLeft="@dimen/centre_smaller_margin_top"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/text_size_money"
+                android:layout_height="@dimen/text_margin_left"/>
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:clickable="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/margin_left"
+        android:layout_marginRight="@dimen/margin_left"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:textSize="@dimen/text_size_20"
+        android:textColor="@android:color/white"
+        android:text="审核"
+        android:background="@drawable/btn_send_selector"/>
+
+</LinearLayout>

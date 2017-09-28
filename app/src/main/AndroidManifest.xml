@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.administrator.irrigationworks"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <!-- 极光推送权限 -->
+    <!-- Required -->
+    <permission
+        android:name="com.example.administrator.irrigationworks.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+    <!-- Required -->
+    <uses-permission android:name="com.example.administrator.irrigationworks.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <!-- Optional. Required for location feature -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 用于开启 debug 版本的应用在6.0 系统上 层叠窗口权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <application
+        android:name=".Application.NimUIKit"
+        android:allowBackup="true"
+        android:icon="@mipmap/logons"
+        android:label="@string/app_name"
+        android:persistent="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="64869702f473c4e3584e8ee0cae5c6e5" />
+        <!-- 极光推送 -->
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default" />
+        <!-- Required. AppKey copied from Portal -->
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="690be88e0857376d165ea625" />
+
+        <activity android:name=".Ui.activity.LocationsignInActivity"></activity>
+        <!-- 隐患警告处理 -->
+        <activity
+            android:name=".Ui.activity.HiddentrouSavebleActvity"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden">
+            >
+        </activity>
+        <!-- 建设工地画册 -->
+        <activity android:name=".Ui.activity.ViewalbumActivity" />
+        <!-- 建设工地画册工地列表 -->
+        <activity android:name=".Ui.activity.BuildatlasActivity" />
+        <!-- 建设工地上传图片工地列表 -->
+        <activity android:name=".Ui.activity.buildingPicSiteActivity" />
+        <!-- 建设工地上传图片 -->
+        <activity android:name=".Ui.activity.PicSiteActivity" />
+        <activity android:name=".Ui.adapter.IrrigationWordsActivity"></activity>
+        <activity android:name=".Ui.activity.MainActivity"></activity>
+        <!-- 审核 -->
+        <activity android:name=".Ui.activity.VerifyActivity" />
+        <!-- 隐患警告项目查看 -->
+        <activity android:name=".Ui.activity.ToubleChitemSiteActivity" />
+        <activity android:name=".Ui.activity.SetpasswordActivity"></activity>
+        <activity
+            android:name=".Ui.activity.OfflineFaceDemo"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Ui.activity.OnlineFaceDemo"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Ui.activity.RegOnlineFaceDemo"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden"></activity>
+        <activity android:name=".Ui.frament.NotificationActivity" />
+        <activity android:name=".Ui.newsign.NewSignActivity" />
+        <activity
+            android:name=".Ui.activity.ChechWordFaceActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden"></activity>
+        <activity android:name=".Ui.activity.Viactivity" />
+        <activity android:name=".Ui.activity.InfoDataActvity" />
+        <activity
+            android:name=".Ui.activity.LoginActivity"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden">
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Ui.activity.IrrigationWordsActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden">
+            d
+        </activity>
+        <activity android:name=".Ui.activity.buildingSiteActivity"></activity>
+        <activity android:name=".Ui.activity.RideRouteDetailActivity"></activity>
+        <activity android:name=".Ui.activity.RideRouteActivity"></activity>
+        <activity android:name=".Ui.activity.ThreeproofingsActivity"></activity>
+        <activity android:name=".Ui.activity.MyWorkcheckActivity" />
+        <activity android:name=".Ui.activity.HistoricalinspectionsActivity"></activity>
+        <activity android:name=".Ui.activity.HiddentroubleActvity"></activity>
+
+        <!-- 图片预览 -->
+        <activity android:name=".Ui.takePhone.activity.PreviewImageActivity"></activity>
+        <activity android:name=".Ui.activity.TeanActivity" />
+        <activity android:name=".Ui.activity.IrrigationRoleWordsActivity"></activity>
+        <!-- 忘记面膜 -->
+        <activity android:name=".Ui.activity.ForgetPasswrodActivity"></activity>
+        <!-- 隐患日历 -->
+        <activity android:name=".Ui.sign.SignActivity"></activity>
+        <!-- 二维码 -->
+        <activity android:name=".Ui.activity.MyappcodeActivity" />
+        <activity android:name=".Ui.activity.TextViewActivity" />
+        <!-- 隐患日历 -->
+        <activity android:name=".Ui.activity.GridViewActivity"></activity>
+        <activity android:name=".Ui.activity.BuildingCheckItemActivity"></activity>
+        <activity android:name=".Ui.activity.EventsActivity"></activity>
+        <activity android:name=".Ui.activity.ChitemSiteActivity"></activity>
+
+        <!-- 极光 SDK 核心功能 -->
+        <service android:name=".Ui.LocationService.LocationService" />
+
+        <!-- 极光 SDK 核心功能 -->
+        <!-- 可配置android:process参数将PushService放在其他进程中 -->
+
+
+        <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
+        <!-- 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 -->
+        <!-- Rich push 核心功能 since 2.0.6 -->
+        <activity
+            android:name="cn.jpush.android.ui.PopWinActivity"
+            android:exported="false"
+            android:theme="@style/MyDialogStyle"></activity>
+
+        <!-- Required SDK核心功能 -->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.example.administrator.irrigationworks" />
+            </intent-filter>
+        </activity>
+
+        <!-- Required SDK 核心功能 -->
+        <!-- 可配置android:process参数将PushService放在其他进程中 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:exported="false"
+            android:process=":mult">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+
+        <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
+        <!-- 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 -->
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DaemonService" />
+
+                <category android:name="com.example.administrator.irrigationworks" />
+            </intent-filter>
+        </service>
+
+        <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" /> <!-- Required  显示通知栏 -->
+                <category android:name="com.example.administrator.irrigationworks" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.AlarmReceiver"
+            android:exported="false" />
+
+        <!-- User defined.  For test only  用户自定义的广播接收器 -->
+        <receiver
+            android:name=".Jpush.MyReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!-- Required  用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.BOOT_COMPLETED" /> <!-- 开机广播 -->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!-- Required  用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!-- Required  用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!-- Required  用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" /> <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="com.example.administrator.irrigationworks" />
+            </intent-filter>
+        </receiver>
+
+        <!-- User defined.  For test only  用户自定义接收消息器,3.0.7开始支持,目前新tag/alias接口设置结果会在该广播接收器对应的方法中回调 -->
+        <receiver android:name=".Jpush.MyJPushMessageReceiver">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
+
+                <category android:name="com.example.administrator.irrigationworks" />
+            </intent-filter>
+        </receiver>
+        <!-- Required  . Enable it you can get statistics data with channel -->
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default" />
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="690be88e0857376d165ea625" /> <!-- </>值来自开发者平台取得的AppKey -->
+
+        <activity android:name=".Ui.activity.DetailImageActivity"></activity>
+    </application>
+
+</manifest>
